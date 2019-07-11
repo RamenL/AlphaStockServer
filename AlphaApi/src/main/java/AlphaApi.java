@@ -1,7 +1,9 @@
 import io.restassured.response.*;
 import models.*;
 
-public class AlphaApi{
+import java.util.concurrent.Executors;
+
+public class AlphaApi implements Runnable{
 
     private AlphaClient alphaClient;
     private String ticker;
@@ -20,15 +22,29 @@ public class AlphaApi{
     public AlphaApi(String apiKey, String ticker){
         this.ticker = ticker;
         this.alphaClient = new AlphaClient(apiKey);
-        run();
+        Executors.newSingleThreadExecutor().submit(this);
     }
 
     public void run(){
-        Response response = this.alphaClient.alphaStock(this.ticker);
-        StockWrapper stockWrapper = response.as(StockWrapper.class);
-        TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
-        for(String current : timeSeriesMap.keySet()){
-            System.out.println(current);
+        try{
+            for(int i = 0; i < 5; i++){
+                Response response = this.alphaClient.alphaStock(this.ticker);
+                StockWrapper stockWrapper = response.as(StockWrapper.class);
+                TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
+                System.out.println(ticker + " Intraday content");
+                for(String current : timeSeriesMap.keySet()){
+                    System.out.println(current);
+                }
+                try{
+                    Thread.sleep(5000);
+                } catch(InterruptedException e){
+                    Thread.currentThread().interrupt();
+                    System.out.println("Thread Interrupted");
+                }
+
+            }
+        } catch(Exception e){
+            e.printStackTrace();
         }
     }
 
