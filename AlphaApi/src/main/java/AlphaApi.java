@@ -8,10 +8,16 @@ public class AlphaApi{
 
 
     public static void main(String[] args){
-        new AlphaApi("MSFT", "HK1DZ9TZBDHG0OE1");
+        if(args.length != 2){
+            System.err.println("Usage: " + AlphaApi.class.getName() + " apiKey ticker");
+            System.exit(-1);
+        }
+        String apiKey = args[0];
+        String ticker = args[1];
+        new AlphaApi(apiKey, ticker);
     }
 
-    public AlphaApi(String ticker, String apiKey){
+    public AlphaApi(String apiKey, String ticker){
         this.ticker = ticker;
         this.alphaClient = new AlphaClient(apiKey);
         run();
