@@ -8,6 +8,9 @@ public class AlphaApi implements Runnable{
     private AlphaClient alphaClient;
     private String ticker;
 
+    private final int MILLISECONDS = 1000;
+    private final int SECONDS_TO_WAIT = 5;
+
 
     public static void main(String[] args){
         if(args.length != 2){
@@ -32,19 +35,21 @@ public class AlphaApi implements Runnable{
                 StockWrapper stockWrapper = response.as(StockWrapper.class);
                 TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
                 System.out.println(ticker + " Intraday content");
-                for(String current : timeSeriesMap.keySet()){
-                    System.out.println(current);
-                }
-                try{
-                    Thread.sleep(5000);
-                } catch(InterruptedException e){
-                    Thread.currentThread().interrupt();
-                    System.out.println("Thread Interrupted");
-                }
+                timeSeriesMap.keySet().forEach(stock -> System.out.println(stock));
+                sleepInMinutes(SECONDS_TO_WAIT);
 
             }
         } catch(Exception e){
             e.printStackTrace();
+        }
+    }
+
+    public void sleepInMinutes(int minutes){
+        try{
+            Thread.sleep(minutes * MILLISECONDS);
+        } catch (InterruptedException e){
+            Thread.currentThread().interrupt();
+            System.out.println("Thread Interrupted");
         }
     }
 
