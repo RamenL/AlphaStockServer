@@ -288,8 +288,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.AlphaApi" />
-      <item itemvalue="Gradle.Plugin" />
       <item itemvalue="Application.AlphaSpringApplication" />
+      <item itemvalue="Gradle.Plugin" />
     </list>
     <recent_temporary>
       <list>
