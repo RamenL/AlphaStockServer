@@ -8,6 +8,8 @@ import io.restassured.mapper.ObjectMapper;
 import io.restassured.response.Response;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,16 +25,16 @@ public class StockController {
         this.alphaClient = new AlphaClient("HK1DZ9TZBDHG0OE1");
     }
 
-    @GetMapping
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = "text/plain")
     public String home(){
-        String stock = "";
-        Response response = this.alphaClient.alphaStock("MSFT");
-        StockWrapper stockWrapper = response.as(StockWrapper.class);
-        TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
-        Map<String, String> jsonMap = new HashMap<>();
-        for(String current : timeSeriesMap.keySet()){
-            jsonMap.put(current, timeSeriesMap.get(current).getHigh());
-        }
+        String stock = "hi Ran";
+//        Response response = this.alphaClient.alphaStock("MSFT");
+//        StockWrapper stockWrapper = response.as(StockWrapper.class);
+//        TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
+//        Map<String, String> jsonMap = new HashMap<>();
+//        for(String current : timeSeriesMap.keySet()){
+//            jsonMap.put(current, timeSeriesMap.get(current).getHigh());
+//        }
 
         return stock;
     }

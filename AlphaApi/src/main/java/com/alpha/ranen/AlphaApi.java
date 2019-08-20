@@ -10,7 +10,8 @@ public class AlphaApi{
 
 
     public static void main(String[] args){
-        new AlphaApi("MSFT", "HK1DZ9TZBDHG0OE1");
+        //"HK1DZ9TZBDHG0OE1"
+        new AlphaApi("MSFT", "demo");
     }
 
     public AlphaApi(String ticker, String apiKey){
