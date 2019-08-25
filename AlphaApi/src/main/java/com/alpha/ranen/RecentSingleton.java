@@ -5,40 +5,43 @@ import com.alpha.ranen.models.TimeSeriesMap;
 
 public class RecentSingleton {
 
-    private static RecentSingleton recentSingleton = new RecentSingleton(); //eager initialization
-    private TimeSeriesMap timeSeriesMap;
-    private String ticker;
+    private static RecentSingleton recentSingleton; //eager initialization
+    private static TimeSeriesMap timeSeriesMap;
+    private static String ticker = "MSFT";
 
     private RecentSingleton(){
 
     }
 
-    public static RecentSingleton getRecentSingleton() {
+    public static synchronized RecentSingleton getRecentSingleton() {
+        if(recentSingleton == null){
+            return new RecentSingleton();
+        }
         return recentSingleton;
     }
 
-    public TimeSeriesMap setTimeSeriesMap(TimeSeriesMap timeSeriesMap) {
-        this.timeSeriesMap = timeSeriesMap;
-        return this.timeSeriesMap;
+    public static TimeSeriesMap setTimeSeriesMap(TimeSeriesMap newTimeSeriesMap) {
+        timeSeriesMap = newTimeSeriesMap;
+        return timeSeriesMap;
     }
 
-    public TimeSeriesMap getTimeSeriesMap(){
-        return this.timeSeriesMap;
+    public static TimeSeriesMap getTimeSeriesMap(){
+        return timeSeriesMap;
     }
 
-    public TimeSeries getRecentTimeSeries(){
-        if(this.timeSeriesMap == null || this.timeSeriesMap.isEmpty()){
+    public static TimeSeries getRecentTimeSeries(){
+        if(timeSeriesMap == null || timeSeriesMap.isEmpty()){
             return null;
         }
-        return this.timeSeriesMap.values().stream().findFirst().orElse(null);
+        return timeSeriesMap.values().stream().findFirst().orElse(null);
     }
 
-    public String setTicker(String ticker){
-        this.ticker = ticker;
-        return this.ticker;
+    public String setTicker(String newTicker){
+        ticker = newTicker;
+        return ticker;
     }
 
-    public String getTicker(){
-        return this.ticker;
+    public static String getTicker(){
+        return ticker;
     }
 }

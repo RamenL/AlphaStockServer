@@ -1,35 +1,30 @@
 package com.alpha.ranen.controllers;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
+import com.alpha.ranen.RecentSingleton;
+import com.alpha.ranen.models.TimeSeries;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.util.UriTemplate;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.net.URI;
 
 
 @RestController
 public class RootController {
+    private RecentSingleton recentSingleton;
 
-//    @GetMapping("/")
-//    @ResponseStatus(value = HttpStatus.NO_CONTENT)
-//    public String adminRoot(final HttpServletRequest request, final HttpServletResponse response){
-//        //final String rootUri = request.getRequestURL().toString();
-//        //final URI finalURI = new UriTemplate("{rootUri}{resource}").expand(rootUri, "test");
-//        return "no content";
-//    }
+    public RootController(){
+        recentSingleton = RecentSingleton.getRecentSingleton();
+    }
 
-    @GetMapping("/test")
-    public String homeTest(){
-        return "localhost:8080/stock";
+    @GetMapping("/recent")
+    public String recentTimeSeries(){
+        TimeSeries timeSeries = RecentSingleton.getRecentSingleton().getRecentTimeSeries();
+        if(timeSeries == null){
+            return "empty";
+        }
+        return timeSeries.getHigh();
     }
 
     @GetMapping("/")
     public String home(){
-        return "root";
+        return recentSingleton.getTicker();
     }
 }

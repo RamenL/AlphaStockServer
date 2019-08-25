@@ -9,18 +9,18 @@ public class StockController implements Runnable{
     private AlphaClient alphaClient;
     private final int FIVE_MIN = 300000;
 
-    public StockController(){
-        super();
-        this.alphaClient = new AlphaClient("HK1DZ9TZBDHG0OE1");
-    }
+//    public StockController(){
+//        super();
+//        this.alphaClient = new AlphaClient("HK1DZ9TZBDHG0OE1");
+//    }
 
     public void run(){
-        RecentSingleton recentSingleton = RecentSingleton.getRecentSingleton();
+        this.alphaClient = new AlphaClient("HK1DZ9TZBDHG0OE1");
         for(;;){
-            Response response = this.alphaClient.alphaStock(recentSingleton.getTicker());
+            Response response = this.alphaClient.alphaStock(RecentSingleton.getRecentSingleton().getTicker());
             StockWrapper stockWrapper = response.as(StockWrapper.class);
             TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
-            recentSingleton.setTimeSeriesMap(timeSeriesMap);
+            RecentSingleton.getRecentSingleton().setTimeSeriesMap(timeSeriesMap);
             sleep();
         }
     }
