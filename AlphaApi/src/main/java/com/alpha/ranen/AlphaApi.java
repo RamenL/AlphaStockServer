@@ -9,10 +9,10 @@ public class AlphaApi{
     private String ticker;
 
 
-    public static void main(String[] args){
-        //"HK1DZ9TZBDHG0OE1"
-        new AlphaApi("MSFT", "demo");
-    }
+//    public static void main(String[] args){
+//        //"HK1DZ9TZBDHG0OE1"
+//        new AlphaApi("MSFT", "demo");
+//    }
 
     public AlphaApi(String ticker, String apiKey){
         this.ticker = ticker;

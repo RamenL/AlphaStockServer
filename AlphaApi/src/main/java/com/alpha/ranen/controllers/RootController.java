@@ -24,7 +24,12 @@ public class RootController {
 //    }
 
     @GetMapping("/test")
-    public String home(){
+    public String homeTest(){
         return "localhost:8080/stock";
+    }
+
+    @GetMapping("/")
+    public String home(){
+        return "root";
     }
 }
