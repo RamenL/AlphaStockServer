@@ -5,15 +5,16 @@ import com.alpha.ranen.models.TimeSeriesMap;
 
 public class RecentSingleton {
 
-    private RecentSingleton recentSingleton = new RecentSingleton();
+    private static RecentSingleton recentSingleton = new RecentSingleton(); //eager initialization
     private TimeSeriesMap timeSeriesMap;
+    private String ticker;
 
     private RecentSingleton(){
 
     }
 
-    public RecentSingleton getRecentSingleton() {
-        return this.recentSingleton;
+    public static RecentSingleton getRecentSingleton() {
+        return recentSingleton;
     }
 
     public TimeSeriesMap setTimeSeriesMap(TimeSeriesMap timeSeriesMap) {
@@ -30,5 +31,14 @@ public class RecentSingleton {
             return null;
         }
         return this.timeSeriesMap.values().stream().findFirst().orElse(null);
+    }
+
+    public String setTicker(String ticker){
+        this.ticker = ticker;
+        return this.ticker;
+    }
+
+    public String getTicker(){
+        return this.ticker;
     }
 }

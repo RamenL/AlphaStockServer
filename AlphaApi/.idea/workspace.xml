@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5ea1af8-3bac-4883-afa6-7e54789889ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/com/alpha/ranen/AlphaApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/com/alpha/ranen/AlphaApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/alpha/ranen/AlphaApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/alpha/ranen/AlphaApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -59,10 +49,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="30" column="63" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="63" />
+            <state relative-caret-position="234">
+              <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
+                <element signature="e#1471#1472#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,10 +63,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
                 <element signature="e#1014#1015#0" expanded="true" />
                 <element signature="e#1065#1066#0" expanded="true" />
                 <element signature="e#1089#1090#0" expanded="true" />
@@ -86,14 +79,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="225">
+              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#274#275#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,10 +142,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/models/StockWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaSpringApplication.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/models/TimeSeries.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java" />
       </list>
     </option>
@@ -179,6 +172,24 @@
             <path>
               <item name="AlphaApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="AlphaApi" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlphaApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlphaApi" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlphaApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlphaApi" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="4.10.3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlphaApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlphaApi" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="4.10.3" type="462c0819:PsiDirectoryNode" />
+              <item name="javaCompile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AlphaApi" type="b2602c69:ProjectViewProjectNode" />
@@ -309,7 +320,7 @@
     <frame x="1475" y="-206" width="1556" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13011889" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13011889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -318,12 +329,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32994923" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13351135" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13351135" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.54483926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32994923" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4179357" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.41789052" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32994923" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32994923" />
@@ -409,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -467,22 +471,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="30" column="63" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
             <element signature="e#1014#1015#0" expanded="true" />
             <element signature="e#1065#1066#0" expanded="true" />
             <element signature="e#1089#1090#0" expanded="true" />
@@ -490,16 +492,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="234">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
           </folding>
         </state>
       </provider>
