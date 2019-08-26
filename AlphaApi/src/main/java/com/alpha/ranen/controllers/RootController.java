@@ -2,8 +2,9 @@ package com.alpha.ranen.controllers;
 
 import com.alpha.ranen.RecentSingleton;
 import com.alpha.ranen.models.TimeSeries;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 
 @RestController
@@ -12,6 +13,11 @@ public class RootController {
 
     public RootController(){
         recentSingleton = RecentSingleton.getRecentSingleton();
+    }
+
+    @GetMapping("/")
+    public String home(){
+        return recentSingleton.getTicker();
     }
 
     @GetMapping("/recent")
@@ -23,8 +29,12 @@ public class RootController {
         return timeSeries.getHigh();
     }
 
-    @GetMapping("/")
-    public String home(){
-        return recentSingleton.getTicker();
+    @RequestMapping(path = "/", method = RequestMethod.PATCH)
+    public String change(@RequestHeader Map<String, String> headers){
+        String updateTicker = headers.get("ticker");
+        RecentSingleton.getRecentSingleton().setTicker(updateTicker);
+        return "Ticker update to the following: " + updateTicker;
     }
+
+
 }
