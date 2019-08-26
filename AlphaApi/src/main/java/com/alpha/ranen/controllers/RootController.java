@@ -1,5 +1,6 @@
 package com.alpha.ranen.controllers;
 
+import com.alpha.ranen.AlphaMessenger;
 import com.alpha.ranen.RecentSingleton;
 import com.alpha.ranen.models.TimeSeries;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import java.util.Map;
 
 @RestController
 public class RootController {
+    private static final String TICKER_HEADER = "ticker";
     private RecentSingleton recentSingleton;
 
     public RootController(){
@@ -17,7 +19,7 @@ public class RootController {
 
     @GetMapping("/")
     public String home(){
-        return recentSingleton.getTicker();
+        return AlphaMessenger.displayCurrentTicker();
     }
 
     @GetMapping("/recent")
@@ -30,10 +32,16 @@ public class RootController {
     }
 
     @RequestMapping(path = "/", method = RequestMethod.PATCH)
-    public String change(@RequestHeader Map<String, String> headers){
-        String updateTicker = headers.get("ticker");
+    public String patchHandler(@RequestHeader Map<String, String> headers){
+        if(headers.containsKey(TICKER_HEADER)){
+            return updateTicker(headers.get(TICKER_HEADER));
+        }
+        return "";
+    }
+
+    public String updateTicker(String updateTicker){
         RecentSingleton.getRecentSingleton().setTicker(updateTicker);
-        return "Ticker update to the following: " + updateTicker;
+        return AlphaMessenger.displayCurrentTicker();
     }
 
 
