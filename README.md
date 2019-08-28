@@ -5,4 +5,6 @@
   The goal of this project was to learn Spring MVC as well as further my familiarity with Jackson, Gradle, and Postman. 
   
 # Improvements
-  A better design would be to make a websocket connection and have the server automatically push when updates are received. Another flaw in the current design is the time frame of the ticker update. While the AlphaApi might update at 1:00PM, the server may not get the most recent update until 1:04PM. This improvement could be achieved by looking at the "Last Refreshed" field in the Meta Data and adding five minutes. Then the server would check if the local time passed the time before making its next call. 
+1. A better design would be to make a websocket connection and have the server automatically push when updates are received. 
+
+2. Another flaw in the current design is the time frame of the ticker update. While the AlphaApi might update at 1:00PM, the server may not get the most recent update until 1:04PM. This improvement could be achieved by looking at the "Last Refreshed" field in the Meta Data and adding five minutes. Then the server would check if the local time passed the time before making its next call. 
