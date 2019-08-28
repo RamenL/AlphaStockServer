@@ -1,5 +1,6 @@
 package com.alpha.ranen;
 
+import com.alpha.ranen.models.MetaData;
 import com.alpha.ranen.models.TimeSeries;
 import com.alpha.ranen.models.TimeSeriesMap;
 
@@ -7,6 +8,7 @@ public class RecentSingleton {
 
     private static RecentSingleton recentSingleton; //eager initialization
     private static TimeSeriesMap timeSeriesMap;
+    private static MetaData metaData;
     private static String ticker = "MSFT";
 
     private RecentSingleton(){
@@ -43,5 +45,14 @@ public class RecentSingleton {
 
     public static String getTicker(){
         return ticker;
+    }
+
+    public static MetaData setMetaData(MetaData data){
+        metaData = data;
+        return metaData;
+    }
+
+    public static MetaData getMetaData(){
+        return metaData;
     }
 }

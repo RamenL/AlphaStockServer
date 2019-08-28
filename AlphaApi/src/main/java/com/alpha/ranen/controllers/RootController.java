@@ -2,6 +2,7 @@ package com.alpha.ranen.controllers;
 
 import com.alpha.ranen.AlphaMessenger;
 import com.alpha.ranen.RecentSingleton;
+import com.alpha.ranen.models.MetaData;
 import com.alpha.ranen.models.TimeSeries;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,12 +32,17 @@ public class RootController {
         return timeSeries.getHigh();
     }
 
+    @GetMapping("meta")
+    public MetaData getMetaData(){
+        return RecentSingleton.getMetaData();
+    }
+
     @RequestMapping(path = "/", method = RequestMethod.PATCH)
     public String patchHandler(@RequestHeader Map<String, String> headers){
         if(headers.containsKey(TICKER_HEADER)){
             return updateTicker(headers.get(TICKER_HEADER));
         }
-        return "";
+        return ""; //TODO add response msg
     }
 
     public String updateTicker(String updateTicker){

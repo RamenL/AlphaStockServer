@@ -10,11 +10,6 @@ public class StockController implements Runnable{
     private AlphaClient alphaClient;
     private final int FIVE_MIN = 300000;
 
-//    public StockController(){
-//        super();
-//        this.alphaClient = new AlphaClient("HK1DZ9TZBDHG0OE1");
-//    }
-
     public void run(){
         this.alphaClient = new AlphaClient("HK1DZ9TZBDHG0OE1");
         for(;;){
@@ -22,7 +17,8 @@ public class StockController implements Runnable{
             AlphaMessenger.checkResponseStatus(response);
             StockWrapper stockWrapper = response.as(StockWrapper.class);
             TimeSeriesMap timeSeriesMap = stockWrapper.getTimeSeriesWrapper();
-            RecentSingleton.getRecentSingleton().setTimeSeriesMap(timeSeriesMap);
+            RecentSingleton.setTimeSeriesMap(timeSeriesMap);
+            RecentSingleton.setMetaData(stockWrapper.getMetaData());
             sleep();
         }
     }
