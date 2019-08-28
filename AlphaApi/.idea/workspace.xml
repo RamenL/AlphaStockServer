@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5ea1af8-3bac-4883-afa6-7e54789889ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/RecentSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java" afterDir="false" />
-    </list>
+    <list default="true" id="d5ea1af8-3bac-4883-afa6-7e54789889ab" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -63,17 +58,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="339">
+              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#363#364#0" expanded="true" />
                 <element signature="e#433#434#0" expanded="true" />
                 <element signature="e#529#530#0" expanded="true" />
                 <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#960#961#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaSpringApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -313,7 +310,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1475" y="-206" width="1556" height="841" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16314399" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -324,14 +320,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32994923" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3364486" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3364486" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5447263" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32994923" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3751669" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32994923" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32977304" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32977304" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32994923" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -461,16 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaSpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/StockController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -506,14 +492,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/controllers/RootController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        <state relative-caret-position="339">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#363#364#0" expanded="true" />
             <element signature="e#433#434#0" expanded="true" />
             <element signature="e#529#530#0" expanded="true" />
             <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alpha/ranen/AlphaSpringApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
